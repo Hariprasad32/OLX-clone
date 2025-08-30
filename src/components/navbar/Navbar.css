@@ -1,0 +1,79 @@
+.lang {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav::-webkit-scrollbar {
+  display: none;
+}
+
+/* ... (existing styles unchanged) */
+
+li {
+  font-size: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: color 0.2s; /* Add for hover effect */
+}
+
+li:hover {
+  color: #002f34; /* Darker color on hover */
+}
+
+.all-cats {
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.all-cats:hover {
+  color: #002f34;
+}
+
+.sub-lists {
+  overflow: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory; /* Optional: snap to items on scroll for better mobile UX */
+  -webkit-overflow-scrolling: touch; /* Smooth touch scrolling on iOS */
+}
+
+.sub-lists::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .location-search {
+    display: none;
+  }
+
+  .location {
+    display: none;
+  }
+
+  .locality-search {
+    display: none;
+  }
+
+  .main-search {
+    margin-right: 0;
+  }
+
+  .small-search-box{
+    width: 100%;
+  }
+
+  .small-search-box input{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .locality-search{
+    display: none;
+  }
+}
